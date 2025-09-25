@@ -1,0 +1,42 @@
+#include <stdio.h>
+
+int main() {
+
+	int cas_h, cas_m, draha, rychlost;
+
+	printf("Zadej hodinu odletu: \n");
+	scanf_s(" %d" , &cas_h);
+
+	printf("Zadej minuty odletu:\n");
+	scanf_s(" %d", &cas_m);
+
+	printf("Zadej drahu letu:\n");
+	scanf_s(" %d", &draha);
+
+	printf("Zadej rychlost letu v km/h: \n");
+	scanf_s(" %d", &rychlost);
+
+	float doba;
+	int doba_m_celkove;
+	int doba_h;
+	int doba_m;
+	
+	doba = (float) draha / rychlost;
+	doba_m_celkove = doba * 60;
+	doba_m = doba_m_celkove % 60;
+	doba_h = doba_m_celkove / 60;
+
+	int doba_priletu_h = cas_h + doba_h;
+	int doba_priletu_m = cas_m + doba_m;
+
+	if (doba_priletu_m > 60) {
+		doba_priletu_h = (doba_priletu_m / 60) + doba_priletu_h;
+		doba_priletu_m = doba_priletu_m % 60;
+	} else {
+	}
+
+	printf("Cas priletu: %d:%d", doba_priletu_h, doba_priletu_m);
+
+return 0;
+
+}
