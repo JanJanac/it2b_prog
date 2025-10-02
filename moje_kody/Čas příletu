@@ -35,7 +35,13 @@ int main() {
 	} else {
 	}
 
-	printf("Cas priletu: %d:%d", doba_priletu_h, doba_priletu_m);
+	if (doba_priletu_h > 23) {
+		doba_priletu_h = doba_priletu_h - 24;
+		printf("Cas priletu: %d:%d (o 1 den pozdeji)", doba_priletu_h, doba_priletu_m);
+	}
+	else {
+		printf("Cas priletu: %d:%d", doba_priletu_h, doba_priletu_m);
+	}
 
 return 0;
 
