@@ -33,7 +33,7 @@ int main() {
 			 return 0;
 		 }
 
-		printf("Prejes si vadit na PANU (0) nebo ORLA (1)?\n");
+		printf("Prejes si vsadit na PANU (0) nebo ORLA (1)?\n");
 		scanf_s("%d", &sazka_m);
 	
 		printf("Kolik si prejes vsadit?\n");
