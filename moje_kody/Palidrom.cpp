@@ -17,7 +17,7 @@ int main() {
 		}
 	}
 
-	if (pocet == delka) {
+	if (pocet == delka) {   
 		printf("Je to palidrom");
 	}else {
 		printf("Neni to palidrom");
