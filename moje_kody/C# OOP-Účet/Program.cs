@@ -2,7 +2,7 @@ class Program
 {
     static void Main()
     {
-        Ucet ucet1 = new Ucet (50000, 8);
+        Ucet ucet1 = new Ucet(50000, 8, "Heslo123");
 
         bool pokracovat = true;
         int zvoleni;
@@ -21,14 +21,16 @@ class Program
             switch (zvoleni)
             {
                 case 1:
-                    ucet1.ZobrazZustatek();
+                    Console.WriteLine("Zadej heslo k uctu:");
+                    string heslo = Console.ReadLine();
+                    ucet1.ZobrazZustatek(heslo);
                     break;
                 case 2:
                     ucet1.ZobrazZalozeni();
                     break;
                 case 3:
                     Console.WriteLine("Kolik chces vlozit");
-                    double vloz = double.Parse(Console.ReadLine()); 
+                    double vloz = double.Parse(Console.ReadLine());
                     ucet1.Vlozit(vloz);
                     break;
                 case 4:
